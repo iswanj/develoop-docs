@@ -68,6 +68,5 @@ await  AsyncStorage.setItem("appConfig", JSON.stringify(AppConfig));
 _globalState.setAppConfig(AppConfig);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjkxNjkwNTIsLTg2NjIwOTc4OSwtOD
-Y2MjA5Nzg5LC0xMDQ2Mjc4NzI2XX0=
+eyJoaXN0b3J5IjpbLTE3MjkxNjkwNTJdfQ==
 -->
