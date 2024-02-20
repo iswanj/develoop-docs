@@ -17,7 +17,50 @@ const  ClickHandler  = ({ id, getState }) => {
 	);
 };
 ```
+
+```js
+
+const  RenderHandlingUseMemo  = ({ data }) => {
+	const  displayList  =  useMemo(() => {
+		return  data.map((item) => {
+			return (
+				<View  key={item.id}>
+					<Text>{item.label}</Text>
+				</View>
+			);
+		});
+	}, [data]);
+	return  <View>{displayList}</View>;
+};
+```
+
+```js
+const  ItemComponent  = ({ label }) => {
+
+return (
+
+<View>
+
+<Text>{label}</Text>
+
+</View>
+
+);
+
+};
+
+const  RenderHandlingComponent  = ({ data }) => {
+
+return (
+<View>
+{data.map((item) => (
+<ItemComponent  key={item.id}  label={item.label}  />
+))}
+</View>
+);
+};
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MzA0MTg2NSwtODY2MjA5Nzg5LC04Nj
+eyJoaXN0b3J5IjpbMjAwNDU5NDY3MiwtODY2MjA5Nzg5LC04Nj
 YyMDk3ODksLTEwNDYyNzg3MjZdfQ==
 -->
