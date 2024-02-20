@@ -54,7 +54,7 @@ const  RenderHandlingComponent  = ({ data }) => {
 };
 ```
 #### Saving Local Storage Data
-Instead of persisting individual variables (except auth tokens) that are used to manage the app's initial state, consolidate them into a single state object named `appConfig`. Storing this object in AsyncStorage will reduce the number of calls to AsyncStorage, resulting in a faster app loading time.
+Instead of persisting individual variables ***<I>(except auth tokens) </I>*** that are used to manage the app's initial state, consolidate them into a single state object named `appConfig`. Storing this object in AsyncStorage will reduce the number of calls to AsyncStorage, resulting in a faster app loading time.
 ```js
 const  AppConfig  = {
 	UserId:  "1343oujo2343o434uljfs",
@@ -67,5 +67,5 @@ await  AsyncStorage.setItem("appConfig", JSON.stringify(AppConfig));
 _globalState.setAppConfig(AppConfig);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NjM3ODk1MCwtMTcyOTE2OTA1Ml19
+eyJoaXN0b3J5IjpbLTE4MjIyOTQ1OTVdfQ==
 -->
