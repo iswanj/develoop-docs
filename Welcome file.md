@@ -56,8 +56,18 @@ const  RenderHandlingComponent  = ({ data }) => {
 
 instead of making persist individual variables those are use to manage app initial state save it in single state as appConfig Object and save it in AsyncStorage this will reduce the number of AsyncStorage calls and app will load faster.
 
+```js
+const  AppConfig  = {
+	UserId:  "1343oujo2343o434uljfs",
+	username:  "iswan.jumat",
+	schoolCode:  "schoolLocal",
+};
+
+await  AsyncStorage.setItem("appConfig", JSON.stringify(AppConfig));
+
+_globalState.setAppConfig(AppConfig);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODAyMTQzNzcsLTg2NjIwOTc4OSwtOD
+eyJoaXN0b3J5IjpbLTE3MjkxNjkwNTIsLTg2NjIwOTc4OSwtOD
 Y2MjA5Nzg5LC0xMDQ2Mjc4NzI2XX0=
 -->
