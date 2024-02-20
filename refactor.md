@@ -36,31 +36,29 @@ const  RenderHandlingUseMemo  = ({ data }) => {
 
 ```js
 const  ItemComponent  = ({ label }) => {
-
-return (
-
-<View>
-
-<Text>{label}</Text>
-
-</View>
-
-);
-
+	return (
+		<View>
+			<Text>{label}</Text>
+		</View>
+	);
 };
 
 const  RenderHandlingComponent  = ({ data }) => {
-
-return (
-<View>
-{data.map((item) => (
-<ItemComponent  key={item.id}  label={item.label}  />
-))}
-</View>
-);
+	return (
+		<View>
+			{data.map((item) => (
+				<ItemComponent  key={item.id}  label=		{item.label}  />
+			))}
+		</View>
+	);
 };
 ```
+
+instead of making persist individual variables those are use to manage app initial state save it in single state as appConfig Object and save it in AsyncStorage this will reduce the number of AsyncStorage calls and app will load faster.
+
+```js
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNDU5NDY3MiwtODY2MjA5Nzg5LC04Nj
-YyMDk3ODksLTEwNDYyNzg3MjZdfQ==
+eyJoaXN0b3J5IjpbLTE1MTY4NTcyNTIsLTg2NjIwOTc4OSwtOD
+Y2MjA5Nzg5LC0xMDQ2Mjc4NzI2XX0=
 -->
