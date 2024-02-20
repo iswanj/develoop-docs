@@ -6,41 +6,26 @@ This documentation provides a step-by-step guide for refactoring a React Native 
 
 ```js
 const  ClickHandler  = ({ id, getState }) => {
+	const  handleClick  =  useCallback(() => {
+		getState(id);
+	}, [id]);
 
-const  handleClick  =  useCallback(() => {
+	return (
 
-getState(id);
-
-}, [id]);
-
-  
-
-return (
-
-<View>
-
-<Text>
-
-<Button  title="Click"  onPress={handleClick}  />
-
-</Text>
-
-</View>
-
-);
-
+	<View>
+		<Text>
+			<Button  title="Click"  onPress={handleClick}  />
+		</Text>
+	</View>
+	);
 };
+```
 
-  
-
+```js
 const  RenderHandlingUseMemo  = ({ data }) => {
-
-const  displayList  =  useMemo(() => {
-
-return  data.map((item) => {
-
-return (
-
+	const  displayList  =  useMemo(() => {
+		return  data.map((item) => {
+			return (
 <View  key={item.id}>
 
 <Text>{item.label}</Text>
@@ -122,6 +107,6 @@ await  AsyncStorage.setItem("appConfig", JSON.stringify(AppConfig));
 _globalState.setAppConfig(AppConfig);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4OTk0MjMwLC04NjYyMDk3ODksLTEwND
+eyJoaXN0b3J5IjpbNTk4ODkwNjQxLC04NjYyMDk3ODksLTEwND
 YyNzg3MjZdfQ==
 -->
